@@ -12,7 +12,7 @@ class MovieListItemComponent extends Component {
                         <img src={Poster} alt={Poster}/>
                     </div>
                     <div className="text-item">
-                        <Link to={MOVIE_DETAIL} className="name-item">
+                        <Link to={imdbID} className="name-item">
                             <span>{Title}</span>
                         </Link>
                     </div>

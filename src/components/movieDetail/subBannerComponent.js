@@ -2,31 +2,29 @@ import React, {Component} from 'react';
 
 class SubBannerComponent extends Component {
     render() {
+        const {Title,Year,Runtime,Country,imdbRating} = this.props;
         return (
             <div className="sub-banner-item">
                 <div className="head-item">
                     <div className="left-item">
                         <div className="name-item">
-                            <span>Esaretin Bedeli</span>
+                            <span>{Title}</span>
                         </div>
                         <div className="year-item">
-                            <span>1877</span>
+                            <span>{Year}</span>
                         </div>
                     </div>
                     <div className="right-item">
                         <div className="runtime-item">
-                            <span>145dk</span>
+                            <span>{Runtime}</span>
                         </div>
                         <div className="country-item">
-                            <span>Turkey</span>
+                            <span>{Country}</span>
                         </div>
                         <div className="rating-item">
-                            <span>8.8</span>
+                            <span>{imdbRating}</span>
                         </div>
                     </div>
-                </div>
-                <div className="img-item">
-                    <img src="" alt=""/>
                 </div>
             </div>
         );

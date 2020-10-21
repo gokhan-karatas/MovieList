@@ -6,6 +6,12 @@ const recieveHomeData = (data) => ({
     payload: data
 });
 
+const recieveMovieDetailData = (data,movieId) => ({
+    type: actionTpes.GET_MOVIE_DETAIL_DATA,
+    payload: data,movieId
+})
+
+
 
 export const getHomeDataAction = (movieName, page) => dispatch => {
     WebService.movieSearch(movieName, page)
@@ -25,3 +31,13 @@ export const resetDataAction = (movieName) => dispatch => {
             }
         })
 }
+
+export const recieveMovieDetailAction = (movieId) => dispatch => {
+    WebService.movieDetail(movieId)
+        .then((res) => {
+            if (res.data && res.data.Response !== "False") {
+                dispatch(recieveMovieDetailData(res.data,movieId));
+            }
+        })
+}
+

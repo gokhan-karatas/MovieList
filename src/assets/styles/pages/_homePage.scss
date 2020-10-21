@@ -51,6 +51,12 @@
               align-items: center;
               .name-item{
                 margin: 0 25px 0 0;
+                cursor: pointer;
+                &:hover{
+                  span{
+                    color: red;
+                  }
+                }
               }
             }
           }

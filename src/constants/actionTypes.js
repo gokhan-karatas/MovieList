@@ -1,1 +1,2 @@
 export const GET_HOME_DATA = "GET_HOME_DATA";
+export const GET_MOVIE_DETAIL_DATA = "GET_MOVIE_DETAIL_DATA";

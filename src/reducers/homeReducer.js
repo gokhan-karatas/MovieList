@@ -1,4 +1,4 @@
-import {GET_HOME_DATA} from "../constants/actionTypes";
+import {GET_HOME_DATA, GET_MOVIE_DETAIL_DATA} from "../constants/actionTypes";
 
 const initialState = {};
 
@@ -9,6 +9,19 @@ const homeReducer = (state = initialState,action) =>{
             return {
                 ...state,
                 searchData:action.payload
+
+            };
+        // case GET_MOVIE_DETAIL_DATA:
+        //     return {
+        //         ...state,
+        //         movieDetail:action.payload
+        //
+        //     };
+        case GET_MOVIE_DETAIL_DATA:
+            console.log("action",action)
+            return {
+                ...state,
+                [action.movieId]:action.payload
 
             };
         default:

@@ -8,9 +8,13 @@ import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";
 import reducer from "./reducers";
 import thunk from "redux-thunk";
+import {createLogger} from "redux-logger";
 
 
 const middleware = [thunk];
+
+
+middleware.push(createLogger());
 
 let store = createStore(reducer, applyMiddleware(...middleware));
 
