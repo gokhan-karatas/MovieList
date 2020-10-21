@@ -31,30 +31,6 @@
           }
         }
       }
-      .account-root{
-        min-width: 12vw;
-        .account-wrapper{
-          .account-container{
-            display: flex;
-            align-items: center;
-            .img-item{
-              width: 35px;
-              height: 35px;
-              margin: 0 15px 0 0;
-              img{
-                border-radius: 50%;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-              }
-            span{
-              @include font-bold;
-              @include font-style(18px,#FFF)
-            }
-          }
-        }
-      }
     }
   }
 }

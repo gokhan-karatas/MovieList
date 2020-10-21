@@ -13,6 +13,8 @@ class SearchComponent extends Component {
     }
 
 
+
+
     searchFunc = (e) => {
         if (e.target.value && e.target.value.length > 1) {
             let movieName = e.target.value;

@@ -115,32 +115,13 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
           font-weight: normal;
           font-size: 18px;
           color: #FFF; }
-      .header-root .header-wrapper .header-container .account-root {
-        min-width: 12vw; }
-        .header-root .header-wrapper .header-container .account-root .account-wrapper .account-container {
-          display: flex;
-          align-items: center; }
-          .header-root .header-wrapper .header-container .account-root .account-wrapper .account-container .img-item {
-            width: 35px;
-            height: 35px;
-            margin: 0 15px 0 0; }
-            .header-root .header-wrapper .header-container .account-root .account-wrapper .account-container .img-item img {
-              border-radius: 50%;
-              width: 100%;
-              height: 100%;
-              object-fit: cover; }
-          .header-root .header-wrapper .header-container .account-root .account-wrapper .account-container span {
-            font-family: 'OpenSans-Bold', arial, helvetica, sans-serif;
-            font-weight: normal;
-            font-size: 18px;
-            color: #FFF; }
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   /* IE10+ specific styles go here */ }
 .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .head-item {
   display: flex;
   align-items: center;
-  padding: 15px; }
+  padding: 15px 50px 15px 15px; }
   .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .head-item span {
     font-family: 'OpenSans-Bold', arial, helvetica, sans-serif;
     font-weight: normal;
@@ -157,7 +138,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
   display: flex;
   align-items: center;
   border: 1px solid grey;
-  padding: 15px;
+  padding: 15px 50px 15px 15px;
   border-radius: 10px;
   margin: 0 0 25px 0;
   background-color: #FFFFFF; }
@@ -170,6 +151,13 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     width: 70%;
     display: flex;
     align-items: center; }
+    .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .movie-list-item .left-block .img-item {
+      width: 150px;
+      height: 220px; }
+      .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .movie-list-item .left-block .img-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
     .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .movie-list-item .left-block .text-item {
       margin: 0 25px 0 25px;
       display: flex;
