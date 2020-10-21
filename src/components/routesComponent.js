@@ -6,6 +6,7 @@ import {
     Switch
 } from "react-router-dom";
 import MovieDetailPage from "../pages/movieDetailPage";
+import {SLASH_ROUTE} from "../constants/routePath";
 
 class RoutesComponent extends Component {
     render() {
@@ -13,7 +14,9 @@ class RoutesComponent extends Component {
             <div>
                 <Switch>
                     <Route exact path={ROUTES.HOME} component={HomePage} />
+                    <Route exact path={`${ROUTES.HOME}${SLASH_ROUTE}`} component={HomePage} />
                     <Route exact path={ROUTES.MOVIE_DETAIL} component={MovieDetailPage} />
+                    <Route exact path={`${ROUTES.MOVIE_DETAIL}${SLASH_ROUTE}`} component={MovieDetailPage} />
                 </Switch>
             </div>
         );

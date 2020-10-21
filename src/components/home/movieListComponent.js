@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 class MovieListComponent extends Component {
 
     render() {
-        console.log("this.props.searchData",this.props.searchData)
         return (
             <div className="movie-list-block">
                 <div className="head-item">

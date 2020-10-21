@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
+import {MOVIE_DETAIL} from "../../constants/routePath";
 
 class MovieListItemComponent extends Component {
     render() {
@@ -10,9 +12,9 @@ class MovieListItemComponent extends Component {
                         <img src={Poster} alt={Poster}/>
                     </div>
                     <div className="text-item">
-                        <div className="name-item">
+                        <Link to={MOVIE_DETAIL} className="name-item">
                             <span>{Title}</span>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div className="right-block">
