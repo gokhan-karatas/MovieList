@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 class MovieDetailInformationContainer extends Component {
     render() {
-        console.log("this.props",this.props)
         const {Plot,Genre,Language,Director,Writer,Actors,Production,Poster} = this.props;
         return (
             <div className="movie-detail-block">

@@ -11,14 +11,7 @@ const homeReducer = (state = initialState,action) =>{
                 searchData:action.payload
 
             };
-        // case GET_MOVIE_DETAIL_DATA:
-        //     return {
-        //         ...state,
-        //         movieDetail:action.payload
-        //
-        //     };
         case GET_MOVIE_DETAIL_DATA:
-            console.log("action",action)
             return {
                 ...state,
                 [action.movieId]:action.payload
