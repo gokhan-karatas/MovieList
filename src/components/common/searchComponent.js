@@ -18,7 +18,7 @@ class SearchComponent extends Component {
             let movieName = e.target.value;
             this.props.dispatch(getHomeDataAction(movieName,this.state.page))
         } else {
-            this.props.dispatch(resetDataAction());
+            this.props.dispatch(resetDataAction("pokemon"));
         }
     };
     render() {

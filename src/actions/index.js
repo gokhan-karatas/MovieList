@@ -17,6 +17,11 @@ export const getHomeDataAction = (movieName, page) => dispatch => {
 };
 
 
-export const resetDataAction = () => dispatch => {
-    dispatch(recieveHomeData([]));
+export const resetDataAction = (movieName) => dispatch => {
+    WebService.movieSearch(movieName)
+        .then((res) => {
+            if (res.data && res.data.Response !== "False") {
+                dispatch(recieveHomeData(res.data.Search));
+            }
+        })
 }
