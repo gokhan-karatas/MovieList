@@ -145,7 +145,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     font-family: 'OpenSans-Bold', arial, helvetica, sans-serif;
     font-weight: normal;
     font-size: 24px;
-    color: black; }
+    color: white; }
   .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .head-item .left-item {
     width: 70%; }
   .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .head-item .right-item {
@@ -158,7 +158,9 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
   align-items: center;
   border: 1px solid grey;
   padding: 15px;
-  border-radius: 5px; }
+  border-radius: 10px;
+  margin: 0 0 25px 0;
+  background-color: #FFFFFF; }
   .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .movie-list-item span {
     font-family: 'OpenSans-Regular', arial, helvetica, sans-serif;
     font-weight: normal;
@@ -169,6 +171,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     display: flex;
     align-items: center; }
     .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .movie-list-item .left-block .text-item {
+      margin: 0 25px 0 25px;
       display: flex;
       align-items: center; }
       .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .movie-list-item .left-block .text-item .name-item {
@@ -230,7 +233,8 @@ html {
   font-size: 10px; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: gray; }
 
 ul {
   list-style: none;
