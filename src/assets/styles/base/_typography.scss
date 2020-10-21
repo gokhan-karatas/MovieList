@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "turksporu";
+    src:url("../fonts/turksporu.eot");
+    src:url("../fonts/turksporu.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/turksporu.woff") format("woff"),
+    url("../fonts/turksporu.ttf") format("truetype"),
+    url("../fonts/turksporu.svg#turksporu") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "turksporu" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+
+}
+
+.icon-arr-right:before {
+    content: "\61";
+}

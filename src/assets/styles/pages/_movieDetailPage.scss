@@ -1,0 +1,53 @@
+.movie-detail-root{
+  background-color: grey;
+  .movie-detail-wrapper{
+    .movie-detail-container{
+      .sub-banner-item{
+        .head-item{
+          display: flex;
+          align-items: center;
+          background-color: #333;
+          padding: 30px;
+          span{
+            @include font-bold;
+            @include font-style(30px,white)
+          }
+          .left-item{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px 0 0;
+          }
+          .right-item{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0 0 15px;
+          }
+        }
+        .img-item{
+
+        }
+      }
+      .text-block{
+        padding: 30pz;
+        .text-item{
+          span{
+            @include font-bold;
+            @include font-style(18px,black);
+            margin: 0 10px 0 0;
+          }
+          p{
+            @include font-regular;
+            @include font-style(18px,black)
+          }
+          display: flex;
+          align-items: center;
+          margin: 0 0 15px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+input[type="text"], input[type="password"], input[type="email"], input[type="number"],[type="submit"] {
+  @include border-box;
+  background: transparent none repeat scroll 0 0;
+  border: none;
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
+}
