@@ -10,7 +10,7 @@
           padding: 30px;
           span{
             @include font-bold;
-            @include font-style(30px,white)
+            @include font-style(22px,white)
           }
           .left-item{
             width: 50%;
@@ -32,8 +32,15 @@
         display: flex;
         align-items: flex-start;
         position: relative;
+        .img-item{
+         width: 22%;
+          img{
+            width: 100%;
+          }
+        }
         .text-block{
           padding: 30px;
+          width: 78%;
           .text-item{
             display: flex;
             margin: 0 0 30px 0;
@@ -55,7 +62,7 @@
           align-items: center;
           position: absolute;
           right: 0;
-          bottom: 0;
+          bottom: -15%;
           cursor: pointer;
           &:hover{
             span{

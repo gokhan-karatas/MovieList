@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import MovieListItemComponent from "./movieListItemComponent";
 import {connect} from "react-redux";
+import PaginateComponent from "./paginateComponent";
 
 class MovieListComponent extends Component {
 
+
     render() {
         return (
+
             <div className="movie-list-block">
                 <div className="head-item">
                     <div className="left-item">
@@ -24,10 +27,11 @@ class MovieListComponent extends Component {
                     </div>
                 </div>
                 {
-                    this.props.searchData.map((item,key)=>
+                    this.props.searchData.map((item, key) =>
                         <MovieListItemComponent {...item} key={key}/>
                     )
                 }
+                <PaginateComponent/>
             </div>
         );
     }
@@ -35,7 +39,8 @@ class MovieListComponent extends Component {
 
 
 const mapStateToProps = (state) => ({
-        searchData: state.homeReducer.searchData ? state.homeReducer.searchData : []
+        searchData: state.homeReducer.searchData ? state.homeReducer.searchData : [],
+        totalResult: state.homeReducer.totalResult ? state.homeReducer.totalResult : []
     }
 )
 export default connect(mapStateToProps)(MovieListComponent);

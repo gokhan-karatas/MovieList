@@ -8,7 +8,8 @@ const homeReducer = (state = initialState,action) =>{
         case GET_HOME_DATA:
             return {
                 ...state,
-                searchData:action.payload
+                searchData:action.payload,
+                totalResult:action.totalResult
 
             };
         case GET_MOVIE_DETAIL_DATA:

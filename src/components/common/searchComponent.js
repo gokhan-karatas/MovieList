@@ -7,14 +7,9 @@ class SearchComponent extends Component {
         movieName:"pokemon",
         page: 1
     }
-
     componentDidMount() {
         this.props.dispatch(getHomeDataAction(this.state.movieName, this.state.page));
     }
-
-
-
-
     searchFunc = (e) => {
         if (e.target.value && e.target.value.length > 1) {
             let movieName = e.target.value;
@@ -22,7 +17,10 @@ class SearchComponent extends Component {
         } else {
             this.props.dispatch(resetDataAction("pokemon"));
         }
+
     };
+
+
     render() {
         return (
             <div className="search-root">

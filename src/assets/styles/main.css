@@ -172,6 +172,28 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     display: flex;
     align-items: center;
     justify-content: space-between; }
+.movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li {
+    margin: 0 5px;
+    cursor: pointer; }
+    .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li a {
+      padding: 10px;
+      font-family: 'OpenSans-Bold', arial, helvetica, sans-serif;
+      font-weight: normal;
+      font-size: 20px;
+      color: #333; }
+    .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li.active a {
+      color: red; }
+    .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li.disabled a {
+      color: #666666; }
+    .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li.disabled:hover a {
+      color: #666666; }
+    .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li:hover a {
+      color: red; }
 
 .movie-detail-root {
   background-color: grey; }
@@ -183,7 +205,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     .movie-detail-root .movie-detail-wrapper .movie-detail-container .sub-banner-item .head-item span {
       font-family: 'OpenSans-Bold', arial, helvetica, sans-serif;
       font-weight: normal;
-      font-size: 30px;
+      font-size: 22px;
       color: white; }
     .movie-detail-root .movie-detail-wrapper .movie-detail-container .sub-banner-item .head-item .left-item {
       width: 50%;
@@ -201,8 +223,13 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     display: flex;
     align-items: flex-start;
     position: relative; }
+    .movie-detail-root .movie-detail-wrapper .movie-detail-container .movie-detail-block .img-item {
+      width: 22%; }
+      .movie-detail-root .movie-detail-wrapper .movie-detail-container .movie-detail-block .img-item img {
+        width: 100%; }
     .movie-detail-root .movie-detail-wrapper .movie-detail-container .movie-detail-block .text-block {
-      padding: 30px; }
+      padding: 30px;
+      width: 78%; }
       .movie-detail-root .movie-detail-wrapper .movie-detail-container .movie-detail-block .text-block .text-item {
         display: flex;
         margin: 0 0 30px 0; }
@@ -224,7 +251,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
       align-items: center;
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -15%;
       cursor: pointer; }
       .movie-detail-root .movie-detail-wrapper .movie-detail-container .movie-detail-block .back-btn-item:hover span {
         color: red; }

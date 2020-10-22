@@ -1,17 +1,25 @@
 import React, {Component} from 'react';
 import ReactPaginate from 'react-paginate';
+import {connect} from "react-redux";
 
 
 class PaginateComponent extends Component {
+    allDataFunc = (totalResult) => {
+        return Math.ceil(totalResult / 10)
+    }
+
+    handlePageClick = ()=>{
+    }
+
 
     render() {
         return (
             <ReactPaginate
-                previousLabel={'previous'}
-                nextLabel={'next'}
+                previousLabel={'Previous'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 breakClassName={'break-me'}
-                pageCount={"10"}
+                pageCount={this.allDataFunc(this.props.totalResult)}
                 marginPagesDisplayed={2}
                 pageRangeDisplayed={5}
                 onPageChange={this.handlePageClick}
@@ -23,4 +31,8 @@ class PaginateComponent extends Component {
     }
 }
 
-export default PaginateComponent;
+const mapStateToProps = (state) => ({
+        totalResult: state.homeReducer.totalResult ? state.homeReducer.totalResult : [],
+    }
+)
+export default connect(mapStateToProps)(PaginateComponent);
