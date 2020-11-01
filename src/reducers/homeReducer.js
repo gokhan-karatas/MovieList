@@ -1,6 +1,6 @@
-import {GET_HOME_DATA, GET_MOVIE_DETAIL_DATA} from "../constants/actionTypes";
+import {GET_HOME_DATA, GET_MOVIE_ACTIVE_DATA, GET_MOVIE_DETAIL_DATA} from "../constants/actionTypes";
 
-const initialState = {};
+const initialState = {activePage:1};
 
 const homeReducer = (state = initialState,action) =>{
 
@@ -9,6 +9,8 @@ const homeReducer = (state = initialState,action) =>{
             return {
                 ...state,
                 searchData:action.payload,
+                movieName:action.movieName,
+                activePage:action.activePage,
                 totalResult:action.totalResult
 
             };
@@ -16,6 +18,12 @@ const homeReducer = (state = initialState,action) =>{
             return {
                 ...state,
                 [action.movieId]:action.payload
+
+            };
+        case GET_MOVIE_ACTIVE_DATA:
+            return {
+                ...state,
+                movieName:action.payload
 
             };
         default:

@@ -102,10 +102,12 @@
             &.disabled{
               a{
                 color: #666666;
+                cursor: default;
               }
               &:hover{
                 a{
                   color: #666666;
+                  cursor: default;
                 }
               }
             }

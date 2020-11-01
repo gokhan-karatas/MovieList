@@ -189,9 +189,11 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li.active a {
       color: red; }
     .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li.disabled a {
-      color: #666666; }
+      color: #666666;
+      cursor: default; }
     .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li.disabled:hover a {
-      color: #666666; }
+      color: #666666;
+      cursor: default; }
     .movie-list-root .movie-list-wrapper .movie-list-container .movie-list-block .pagination li:hover a {
       color: red; }
 

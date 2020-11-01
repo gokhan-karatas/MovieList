@@ -1,21 +1,23 @@
 import React, {Component} from 'react';
-import {getHomeDataAction, resetDataAction} from "../../actions";
+import {getHomeDataAction, recieveActiveData} from "../../actions";
 import {connect} from "react-redux";
 
 class SearchComponent extends Component {
-    state={
-        movieName:"pokemon",
-        page: 1
-    }
-    componentDidMount() {
-        this.props.dispatch(getHomeDataAction(this.state.movieName, this.state.page));
+    constructor(props) {
+        super(props);
+        this.state={
+            movieName:"pokemon"
+        }
+        if (!this.props.searchData){
+            this.props.dispatch(getHomeDataAction(this.state.movieName,this.props.activePage));
+        }
     }
     searchFunc = (e) => {
         if (e.target.value && e.target.value.length > 1) {
             let movieName = e.target.value;
-            this.props.dispatch(getHomeDataAction(movieName,this.state.page))
+            this.props.dispatch(getHomeDataAction(movieName,1))
         } else {
-            this.props.dispatch(resetDataAction("pokemon"));
+            this.props.dispatch(recieveActiveData("pokemon"));
         }
 
     };
@@ -38,7 +40,8 @@ class SearchComponent extends Component {
 }
 
 const mapStateToProps = (state) => ({
-        searchData: state.homeReducer.searchData ? state.homeReducer.searchData : []
+        searchData: state.homeReducer.searchData ? state.homeReducer.searchData : null,
+        activePage: state.homeReducer.activePage ? state.homeReducer.activePage : null
     }
 )
 export default connect(mapStateToProps)(SearchComponent);
